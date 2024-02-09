@@ -33,4 +33,17 @@ namespace Connect_four
 
     }
 
+    public class Score
+    {
+        
+        public int ScoreId { get; set; }
+        
+        public int UserId { get; set; }
+        
+        public int Result { get; set; }
+        
+        public bool IsAgainstAI { get; set; }
+        
+    }
+
 }
