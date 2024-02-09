@@ -20,6 +20,23 @@ namespace Connect_four
 
     }
 
+    public class ScoreContext : DbContext
+    {
+
+        public DbSet<Score> Scores { get; set; }
+        
+        private string DbPath { get; set; }
+
+        public ScoreContext()
+        {
+            var path = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
+            DbPath = System.IO.Path.Join(path, "scores.db");
+        }
+        
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) => optionsBuilder.UseSqlite($"Data Source={DbPath}");
+        
+    }
+
     public class User
     {
 
