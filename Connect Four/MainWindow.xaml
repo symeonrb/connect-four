@@ -6,6 +6,8 @@
         xmlns:local="clr-namespace:Connect_four"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-    </Grid>
+    <Window.Resources>
+        <Style x:Key="GridStyle1" TargetType="{x:Type Grid}"/>
+    </Window.Resources>
+    <Label Content="Jeu" HorizontalAlignment="Left" Margin="284,0,0,0" VerticalAlignment="Center" Height="145" Width="143"/>
 </Window>
